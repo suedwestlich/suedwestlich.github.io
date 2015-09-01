@@ -1,0 +1,11 @@
+#footer {
+        border-top: 3px solid #8feb8d;
+        padding-top: 10px;
+        text-align: center;
+        color: #ccc;
+        font-size: 0.75em;
+}
+
+a:hover {
+	color:#8feb8d
+}
