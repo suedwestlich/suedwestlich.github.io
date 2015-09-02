@@ -1,11 +1,440 @@
 #footer {
-        border-top: 3px solid #8feb8d;
-        padding-top: 10px;
-        text-align: center;
-        color: #ccc;
-        font-size: 0.75em;
+	border-top: 3px solid #8feb8d;
+	padding-top: 10px;
+	text-align: center;
+	color: #ccc;
+	font-size: 0.75em;
+}
+
+p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu, h4, h5, h6, img, figure, figcaption, button, hr, header {
+	margin: 0 0 1.5em;
+}
+
+/* Fonts settings based on the 100E2R standard: http://www.informationarchitects.jp/en/100e2r/ */
+body, button, input, select, textarea {
+	font: 1em/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #444; /* Black on white is too much contrast, #333 is a lot better */
+}
+/* Links
+---------------------------------------- */
+
+a, a:visited {
+	text-decoration: none;
+	color: #333;
+	border-bottom: 1px solid #aaa;
 }
 
 a:hover {
-	color:#8feb8d
+	color: #000;
+	text-decoration: none;
+	border-bottom: 3px solid #0088cc;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+/* Better CSS outline suppression: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active {
+    outline: none;
+}
+
+ul.tags li a:hover {
+	background: #f3f3f1;
+	color: #999;
+}
+
+#articles h2 a:hover {
+	color: #0088cc
+}
+
+article.archive .archive-link a:hover {
+	color: #000;
+	border-bottom: 3px solid #0088cc;
+}
+
+pre:hover {
+	background: #0088cc;
+	-moz-box-shadow:    inset 0 0 10px #000000;
+	-webkit-box-shadow: inset 0 0 10px #000000;
+	box-shadow: inset 0 0 10px #000000;
+}
+
+pre {
+    padding: 1.5em;
+}
+
+figure {
+	float: left;
+	margin-right: 3%;
+	font-size: 0.625em;
+	text-align: center;
+}
+
+footer {
+	padding: 3em 0;
+	overflow: hidden;
+	color: #717171;
+	text-shadow: 0 -1px 0 #222;
+	border-top: 1px solid #111;
+	background: #333;
+}
+
+#top-header, #articles {
+	position: relative;
+	z-index: 99999;
+}
+
+#top-header {
+	background: #F5F5F2 url('../img/me.png') no-repeat top center fixed;
+	background-size: 100% auto;
+	width: 100%;
+	padding: 1em 0 4em;
+	margin: 0;
+	zoom: 1;
+}
+
+#top-header:hover, #top-header:hover h1 {
+	color: #0088cc;
+}
+
+button, a, button:hover, a:hover, pre, pre:hover, #main-header, #main-header:hover, #top-header:hover h1, ul.tags li a {
+	-moz-transition: all linear 0.1s;
+	-webkit-transition: all linear 0.1s;
+	-o-transition: all linear 0.1s;
+	transition: all linear 0.1s;
+}
+
+.content {
+	margin: 0 auto;
+	max-width: 600px;
+}
+
+.group:before, .group:after {
+	content: "";
+	display: table;
+}
+
+.group:after {
+	clear: both;
+}
+
+.group {
+	*zoom: 1;
+}
+
+#main-header {
+	clear: both;
+	display: block;
+	text-shadow: 0px 1px 0px #fff;
+	text-shadow: 0px 1px 0px rgba(255,255,255,0.1);
+}
+
+#main-header h1 {
+    letter-spacing: -1px;
+    color: #333;
+    color: rgba(0,0,0,0.8);
+    text-shadow: 0px 1px 0px #fff;
+    text-shadow: 0px 1px 0px rgba(255,255,255,0.2);
+    font-size: 96px;
+    line-height: 96px;
+}
+
+#main-nav, #main-header {
+	text-align: left;
+}
+
+/* Corrects block display not defined in IE6/7/8 and FF3 */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {
+	display: block;
+}
+
+.avatar {
+	background-size: 128px 128px;
+	width: 128px;
+	height: 128px;
+	-webkit-border-radius: 128px;
+	-moz-border-radius: 128px;
+	-ms-border-radius: 128px;
+	-o-border-radius: 128px;
+	border-radius: 128px;
+	border-bottom: 1px solid rgba(255,255,255,0.8);
+	box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Media queries
+---------------------------------------- */
+
+@media only screen and (max-width: 480px) {
+	body {
+		width: 100%;
+	}
+	.content {
+	  width: 80%;
+	}
+
+	#main-nav ul {
+	   width: 100%;
+  }
+
+  #main-nav li {
+  	display: inline-block;
+  	list-style: none;
+  	margin: 1em 0.65em;
+  	font-size: 0.8em;
+  }
+
+  article.archive .archive-date {
+    color: #999;
+    width: 80%;
+    display: block;
+    float: none;
+    text-align: left;
+  }
+  
+  article.archive .archive-link {
+    display: block;
+    width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  #main-nav, #main-header {
+	 text-align: center;
+  }
+
+  #main-header {
+    margin: 0 0 2em;
+  }
+	
+	#main-header h1 {
+    font-size: 42px;
+    line-height: 48px;
+    letter-spacing: 0;
+  }
+
+  #top-header {
+    background-size: 150% auto;
+    padding-bottom: 2em;
+  }
+
+  ul.tags {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+    ul.tags li { 
+      float: none;
+      margin-right: -0.1em;
+    }  
+  
+  footer {
+    padding: 4em 0 8em; 
+  }
+  
+  .date {
+    display: block;
+    text-align: center;
+    float: none;
+    position: relative;
+    margin: 0 auto;
+    margin-top: -1.6em;
+  } 
+
+  .avatar { 
+    float: none;
+    display: block;
+    margin: 1em auto 1.2em;
+    background-size: 64px 64px !important;
+    width: 64px;
+    height: 64px;
+    -webkit-border-radius: 64px;
+    -moz-border-radius: 64px;
+    -ms-border-radius: 64px;
+    -o-border-radius: 64px;
+    border-radius: 64px;  
+    border: 1px solid #eee
+  }
+
+  .articlepost { 
+    padding: 0;
+    clear: both;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 3em;
+    border: 0;
+  }
+
+  h2 {
+    font-size: 26px;
+    line-height: 36px;
+    margin-top: 24px;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+
+  .author { 
+    margin: 1em auto
+  }
+
+  article {
+    margin: 0;
+    padding: 1em 0;
+  }
+
+
+}
+
+@media only screen and (min-width: 480px) {
+
+	body {
+		width: 100%;		
+	}
+	.content {
+	  width: 80%;
+	}
+
+  #top-header {
+    background-size: 100% auto;
+    width: 100%;
+    padding: 1em 0 4em;
+    margin: 0;
+    zoom: 1; 
+  }
+  
+  .avatar { 
+    position: relative;
+    margin: 1em auto 2em;
+  }
+
+  .author { 
+    margin: 1em auto
+  }
+
+  #main-header {
+    margin: 6em 0 0;
+  }
+  
+  #main-nav, #main-header {
+	 text-align: center;
+  }
+
+	#main-nav ul {
+    margin-top: 1em;
+  }
+  
+  #main-nav li {
+		display: inline;
+	}
+  
+}
+
+@media only screen and (min-width: 1024px) { 
+	body {
+		width: 100%;
+	}
+	
+	.avatar {
+	  margin: 0;
+	  float: right
+	}
+	
+  #main-header {
+    margin: 10em 0 0;
+  }
+
+  .author {
+    margin: 1em 0 0
+  }
+
+	.content {
+	 width: 100%;
+	}
+
+  #main-nav, #main-header {
+	 text-align: left;
+	 padding-bottom: 1em
+  }
+
+	#main-nav {
+		float: right;
+		margin: 1em 2%;
+	}
+
+	#main-nav ul {
+    margin-top: 0em;
+  }
+
+	#main-nav li {
+		float: left;
+	}
+
+	button {
+		width: 100%;
+	}
+	
+}
+
+@media only screen and (min-width: 1025px) { 
+	#top-header{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;	
+	}
+}
+
+/* Print styles
+---------------------------------------- */
+
+/* Print styles inlined to avoid extra HTTP connection */
+
+@media print {
+	* {
+		background: transparent !important;
+		color: black !important; /* Black prints faster: sanbeiji.com/archives/953 */
+		text-shadow: none !important;
+		filter: none !important;
+		-ms-filter: none !important;
+	}
+
+	a, a:visited {
+		text-decoration: underline;
+	}
+
+	a[href]:after {
+		content: " (" attr(href) ")";
+	}
+
+	abbr[title]:after {
+		content: " (" attr(title) ")";
+	}
+
+	/* Do not show javascript and internal links */
+	a[href^="javascript:"]:after, a[href^="#"]:after {
+		content: ""; 
+	}
+
+	/* Printing Tables: css-discuss.incutio.com/wiki/Printing_Tables */
+	thead {
+		display: table-header-group;
+	}
+
+	tr, img {
+		page-break-inside: avoid;
+	}
+
+	@page {
+		margin: 0.5cm;
+	}
+
+	p, h2, h3 {
+		orphans: 3;
+		widows: 3;
+	}
+
+	h2, h3 {
+		page-break-after: avoid;
+	}
 }
