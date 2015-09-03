@@ -385,7 +385,7 @@ ul.tags li a:hover {
 }
 
 #top-header {
-	background: #F5F5F2 url('assets/img/me.jpg') no-repeat top center fixed;
+	background: #F5F5F2 url('img/me.jpg') no-repeat top center fixed;
 	background-size: 100% auto;
 	width: 100%;
 	padding: 1em 0 4em;
