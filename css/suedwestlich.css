@@ -1,0 +1,664 @@
+html {
+  height: 100%;
+  font-size: 100%;
+  overflow-y: scroll; /* Force a scrollbar in non-IE */
+  -webkit-text-size-adjust: 100%; /* Prevent iOS text size adjust on orientation change without disabling user zoom */
+  -ms-text-size-adjust: 100%;
+  background: #fff;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100%;
+  max-width: 100%;
+}
+
+body:before {
+  position: absolute;
+  top: 0;
+  height: 10px;
+  left: 0;
+  width: 100%;
+  background: #8feb8d;
+  background: rgba(0,132,234,0.65);
+  content: "";
+  margin: 0;
+  padding: 0;
+  z-index: 999999;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+footer {
+  padding: 3em 0;
+  overflow: hidden;
+  color: #717171;
+  text-shadow: 0 -1px 0 #222;
+  border-top: 1px solid #111;
+  background: #333;
+}
+
+/* HTML5 elements display
+---------------------------------------- */
+
+/* Corrects block display not defined in IE6/7/8 and FF3 */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {
+  display: block;
+}
+
+p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu, h4, h5, h6, img, figure, figcaption, button, hr, header {
+  margin: 0 0 1.5em;
+}
+
+blockquote > p {
+  padding: 0;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+var, address, p, textarea, input, blockquote, select {
+    font-family: 'PT Sans', 'Helvetica', Arial, Helvetica, sans-serif; font-weight: normal
+}
+
+.articlepost { 
+  display: block;
+  width: 100%;
+  padding-top: 6em;
+  padding-bottom: 5.5em;
+}
+
+#articles {
+  background: white;
+}
+
+#articles h2 a {
+  border: 0;
+}
+  
+#articles h2 a:hover {
+    color: #0088cc
+}
+
+article {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+article.archive {
+  border: 0;
+  padding: 0;
+}
+
+article.archive .archive-date {
+    color: #999;
+    width: 20%;
+    display: block;
+    float: left;
+    text-align: left;
+    margin-right: 1em;
+}
+  
+article.archive .archive-link {
+    display: block;
+    float: left;
+    font-family: 'PT Sans';
+    padding-bottom: 0em;
+    color: #333;
+    width: 60%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+article.archive .archive-link a {
+  border: 0;
+}
+
+article.archive .archive-link a:hover {
+  color: #000;
+  border-bottom: 3px solid #0088cc;
+}
+  
+article.archive .archive-date-divider {
+    float: right;
+    font-size: 0.65em;
+    color: #bbb;
+    margin-top: -2.3em;
+}  
+
+.archive-spacer {
+  padding-top: 2.3em;
+}
+
+article.archive-devider {
+  padding-top: 3em;
+  margin-top: 4em;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 0px;
+}
+
+article.divider_0 {
+  margin-top: 0em;
+  border: 0;  
+}
+
+.date {
+  float: right;
+  line-height: 64px;
+  font-size: 0.65em;
+  color: #bbb;
+}
+
+.container {
+  text-align: center;
+  display: block;
+}
+
+/* Header */
+
+#header-top {
+  /*background: #F5F5F2 url('../img/me.png') no-repeat top center fixed; */
+  background-size: 100% auto;
+  width: 100%;
+  padding: 1em 0 4em;
+  margin: 0;
+  zoom: 1;
+}
+
+#header-top:hover, #header-top:hover h1 {
+  color: #8feb8d;
+}
+
+#header-top, #articles {
+  position: relative;
+  z-index: 99999;
+}
+
+button, a, button:hover, a:hover, pre, pre:hover, #header-main, #header-main:hover, #header-top:hover h1, ul.tags li a {
+  -moz-transition: all linear 0.1s;
+  -webkit-transition: all linear 0.1s;
+  -o-transition: all linear 0.1s;
+  transition: all linear 0.1s;
+}
+
+#header-main {
+  clear: both;
+  display: block;
+  text-shadow: 0px 1px 0px #fff;
+  text-shadow: 0px 1px 0px rgba(255,255,255,0.1);
+}
+
+#header-main h1 {
+    letter-spacing: -1px;
+    color: #333;
+    color: rgba(0,0,0,0.8);
+    text-shadow: 0px 1px 0px #fff;
+    text-shadow: 0px 1px 0px rgba(255,255,255,0.2);
+    font-size: 96px;
+    line-height: 96px;
+}
+
+#main-nav, #header-main {
+  text-align: left;
+}
+
+/* Links
+---------------------------------------- */
+
+a, a:visited {
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #aaa;
+}
+
+a:hover {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 3px solid #8feb8d;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+/* Better CSS outline suppression: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active {
+  outline: none;
+}
+
+/* Headings/small
+---------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  text-shadow: 0px 1px 0px white;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  color: #333;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 48px;
+}
+
+h2 {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 24px;
+}
+
+h3 {
+    font-size: 21px;
+    line-height: 24px;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+h5 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+h6 {
+    font-size: 12px;
+    line-height: 12px;
+}
+
+small {
+  font-size: 0.65em; /* 10px */
+  margin: 0 0 1.5em;
+}
+
+.author {
+  width: 70%;
+}
+/* Helper classes
+---------------------------------------- */
+
+/*
+  * Micro clearfix hack, more semantically titled with 'group'
+  * Source: nicolasgallagher.com/micro-clearfix-hack/
+*/
+.group:before, .group:after {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+.group {
+  *zoom: 1;
+}
+
+/* Embedded content
+---------------------------------------- */
+
+img, object, video {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%; /* Consider this first: unstoppablerobotninja.com/entry/fluid-images/ */
+  /* _width: 100%; /* Uncomment this: IE6 doesn't support max-width, so we use width: 100% for it. If the image/video is smaller than the container, change 100% to an absolute value */
+}
+
+/*
+  * 1. Removes border when inside 'a' element in IE6/7/8/9
+  * 2. Improve IE's resizing of images: css-tricks.com/ie-fix-bicubic-scaling-for-images
+*/
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic; /* Improve IE's resizing of images: css-tricks.com/ie-fix-bicubic-scaling-for-images */
+}
+
+/* Corrects overflow displayed oddly in IE9 */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Pagination */
+
+.pagination { 
+  height:36px;
+  margin:18px 0px 18px 45px;
+  display: block;
+}
+
+.pagination ul {
+  float:left;margin:0;
+  border:0px solid #ddd;
+  border:0px solid rgba(0,0,0,0.15);
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
+}
+
+.pagination li {
+  display:inline
+}
+
+.pagination a {
+  float:left;
+  padding:0 14px;
+  line-height:34px;
+  border-right:1px solid;
+  border-right-color:#ddd;
+  border-right-color:rgba(0,0,0,0.15);
+  *border-right-color:#ddd;
+  text-decoration:none
+}
+
+.pagination a:hover {
+  background-color:#f1f1f1
+}
+
+.pagination .active a {
+  color: black
+}
+
+.pagination .disabled a,.pagination .disabled a:hover {
+  background-color:transparent;
+    color:#bfbfbf
+}
+
+.pagination .next a {
+    border:0
+}
+
+.pagination .previous a {
+    border:0
+}
+
+/* Media queries
+---------------------------------------- */
+
+@media only screen and (max-width: 480px) {
+  body {
+    width: 100%;
+  }
+  .content {
+    width: 80%;
+  }
+
+  #main-nav ul {
+     width: 100%;
+  }
+
+  #main-nav li {
+    display: inline-block;
+    list-style: none;
+    margin: 1em 0.65em;
+    font-size: 0.8em;
+  }
+
+  article.archive .archive-date {
+    color: #999;
+    width: 80%;
+    display: block;
+    float: none;
+    text-align: left;
+  }
+  
+  article.archive .archive-link {
+    display: block;
+    width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  #main-nav, #header-main {
+   text-align: center;
+  }
+
+  #header-main {
+    margin: 0 0 2em;
+  }
+  
+  #header-main h1 {
+    font-size: 42px;
+    line-height: 48px;
+    letter-spacing: 0;
+  }
+
+  #top-header {
+    background-size: 150% auto;
+    padding-bottom: 2em;
+  }
+
+  ul.tags {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+    ul.tags li { 
+      float: none;
+      margin-right: -0.1em;
+    }  
+  
+  footer {
+    padding: 4em 0 8em; 
+  }
+  
+  .date {
+    display: block;
+    text-align: center;
+    float: none;
+    position: relative;
+    margin: 0 auto;
+    margin-top: -1.6em;
+  } 
+
+  .avatar { 
+    float: none;
+    display: block;
+    margin: 1em auto 1.2em;
+    background-size: 64px 64px !important;
+    width: 64px;
+    height: 64px;
+    -webkit-border-radius: 64px;
+    -moz-border-radius: 64px;
+    -ms-border-radius: 64px;
+    -o-border-radius: 64px;
+    border-radius: 64px;  
+    border: 1px solid #eee
+  }
+
+  .articlepost { 
+    padding: 0;
+    clear: both;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 3em;
+    border: 0;
+  }
+
+  h2 {
+    font-size: 26px;
+    line-height: 36px;
+    margin-top: 24px;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+
+  .author { 
+    margin: 1em auto
+  }
+
+  article {
+    margin: 0;
+    padding: 1em 0;
+  }
+
+
+}
+
+@media only screen and (min-width: 480px) {
+
+  body {
+    width: 100%;    
+  }
+  .content {
+    width: 80%;
+  }
+
+  #top-header {
+    background-size: 100% auto;
+    width: 100%;
+    padding: 1em 0 4em;
+    margin: 0;
+    zoom: 1; 
+  }
+  
+  .avatar { 
+    position: relative;
+    margin: 1em auto 2em;
+  }
+
+  .author { 
+    margin: 1em auto
+  }
+
+  #header-main {
+    margin: 6em 0 0;
+  }
+  
+  #main-nav, #header-main {
+   text-align: center;
+  }
+
+  #main-nav ul {
+    margin-top: 1em;
+  }
+  
+  #main-nav li {
+    display: inline;
+  }
+  
+}
+
+@media only screen and (min-width: 1024px) { 
+  body {
+    width: 100%;
+  }
+  
+  .avatar {
+    margin: 0;
+    float: right
+  }
+  
+  #header-main {
+    margin: 10em 0 0;
+  }
+
+  .author {
+    margin: 1em 0 0
+  }
+
+  .content {
+   width: 100%;
+  }
+
+  #main-nav, #header-main {
+   text-align: left;
+   padding-bottom: 1em
+  }
+
+  #main-nav {
+    float: right;
+    margin: 1em 2%;
+  }
+
+  #main-nav ul {
+    margin-top: 0em;
+  }
+
+  #main-nav li {
+    float: left;
+  }
+
+  button {
+    width: 100%;
+  }
+  
+}
+
+@media only screen and (min-width: 1025px) { 
+  #top-header{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+  }
+}
+
+/* Print styles
+---------------------------------------- */
+
+/* Print styles inlined to avoid extra HTTP connection */
+
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important; /* Black prints faster: sanbeiji.com/archives/953 */
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  a, a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* Do not show javascript and internal links */
+  a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: ""; 
+  }
+
+  /* Printing Tables: css-discuss.incutio.com/wiki/Printing_Tables */
+  thead {
+    display: table-header-group;
+  }
+
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}
