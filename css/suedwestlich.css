@@ -146,6 +146,11 @@ article.archive-devider {
   border-bottom: 0px;
 }
 
+.archive-foot {
+  display: block;
+  height: 5em;
+}
+
 article.divider_0 {
   margin-top: 0em;
   border: 0;  
@@ -166,7 +171,7 @@ article.divider_0 {
 /* Header */
 
 #header-top {
-  /*background: #F5F5F2 url('../img/me.png') no-repeat top center fixed; */
+  background: #F5F5F2 no-repeat top center fixed;
   background-size: 100% auto;
   width: 100%;
   padding: 1em 0 4em;
@@ -209,6 +214,15 @@ button, a, button:hover, a:hover, pre, pre:hover, #header-main, #header-main:hov
 
 #main-nav, #header-main {
   text-align: left;
+}
+
+#main-nav {
+  height: 4em;
+}
+
+#main-nav li {
+  list-style: none;
+  margin: 0 0.65em;
 }
 
 /* Links
@@ -404,7 +418,8 @@ svg:not(:root) {
   #main-nav li {
     display: inline-block;
     list-style: none;
-    margin: 1em 0.65em;
+    /*margin: 1em 0.65em;*/
+    margin: 1em 0.65em 0em -3em;
     font-size: 0.8em;
   }
 
