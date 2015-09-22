@@ -64,7 +64,7 @@ blockquote:before, blockquote:after, q:before, q:after {
 }
 
 var, address, p, textarea, input, blockquote, select {
-    font-family: 'PT Sans', 'Helvetica', Arial, Helvetica, sans-serif; font-weight: normal
+    font-family: 'Montserrat', 'Helvetica', Arial, Helvetica, sans-serif; font-weight: normal
 }
 
 .articlepost { 
@@ -110,7 +110,7 @@ article.archive .archive-date {
 article.archive .archive-link {
     display: block;
     float: left;
-    font-family: 'PT Sans';
+    font-family: 'Montserrat';
     padding-bottom: 0em;
     color: #333;
     width: 60%;
@@ -253,7 +253,7 @@ a:hover, a:active {
 ---------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1em;
   font-weight: normal;
   text-shadow: 0px 1px 0px white;
