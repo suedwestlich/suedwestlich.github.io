@@ -158,7 +158,7 @@ article.divider_0 {
 
 .date {
   float: right;
-  line-height: 64px;
+  line-height: 32px;
   font-size: 0.65em;
   color: #bbb;
 }
@@ -382,14 +382,15 @@ ul.tags li a:hover {
 /* Pagination */
 
 .pagination { 
-  height:60px;
-  /* margin:18px 0px 18px 45px;
-  margin: 1em 30em 1em 0em; */
+  text-align: center;
+  height:20px;
+  /* margin: 1em 7em 1em 0em; */
   display: block;
 }
 
 .pagination ul {
-  float:left;margin:0;
+  float:left;
+  margin:0;
   text-align: center;
   border:0px solid #ddd;
   border:0px solid rgba(0,0,0,0.15);
@@ -442,7 +443,8 @@ ul.tags li a:hover {
     width: 100%;
   }
   .content {
-    width: 80%;
+    text-align: center;
+    width: 90%;
   }
 
   #main-nav ul {
@@ -450,10 +452,10 @@ ul.tags li a:hover {
   }
 
   #main-nav li {
-    display: inline-block;
+    display: block;
     list-style: none;
     /*margin: 1em 0.65em;*/
-    margin: 1em 0.65em 0em -3em;
+    margin: 1em 0.65em -2em -3em; /* 1em 0.65em 0em -3em */
     font-size: 0.8em;
   }
 
@@ -497,13 +499,13 @@ ul.tags li a:hover {
     text-align: center;
   }
   
-    ul.tags li { 
-      float: none;
-      margin-right: -0.1em;
-    }  
-  
+  ul.tags li { 
+    float: none;
+    margin-right: -0.1em;
+  }  
+
   footer {
-    padding: 4em 0 8em; 
+    padding: 2em 0 2em; 
   }
   
   .date {
